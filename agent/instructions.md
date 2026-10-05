@@ -22,6 +22,8 @@ Score every issue with this rubric and nothing else:
 | Touched files guessable from the text (file names, function names, class names, or a game system you can map to a source directory) | +1 |
 | Activity in the last 30 days (`updated_at`) | +1 |
 
+Rate-limit rule: score the assignee, repro, files, and activity signals for every issue first, from the list responses alone. Then run the timeline check for linked PRs only on the top 10 by that partial score. Never call the timeline endpoint more than 10 times in one `triage`. Unchecked issues get `(unverified: linked PR)` as described below.
+
 Max score is 7. Output a ranked markdown table of the top 8:
 
 ```

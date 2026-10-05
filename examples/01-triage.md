@@ -1,30 +1,6 @@
-# Playbook 01 — issue triage
-
-## When to use it
-
-Start of a contribution session, or whenever the current issue stalls and I need the next one. Run it once; the result is good for a few days.
-
-## Prompt to send
-
-```
-triage cataclysmbn/Cataclysm-BN
-```
-
-One line, nothing else. Swap the repo slug if needed.
-
-## Expected output
-
-A markdown table, top 8 issues, columns: rank, issue link, score (0–7), labels, one-line reason. Then a single line with fetch counts (total issues, how many `bug`, how many `good first issue`). Should come in under 300 words.
-
-Scoring is fixed in `agent/instructions.md`: no assignee +2, no linked PR +2, repro steps +1, guessable files +1, activity in last 30 days +1.
-
-## What I do with it
-
-Open the top 3 in the browser, sanity-check that nobody claimed them in a comment the API scorer missed, pick one, then run `repro` on it.
-
-## Worked example
-
-Run on 5 Oct 2026. Screenshot: [evidence/01.jpg](../../evidence/01.jpg). Raw output, unedited:
+date: 2026-10-05
+command: triage cataclysmbn/Cataclysm-BN
+screenshot: evidence/01.jpg
 
 | # | Issue | Score | Labels | Why this one |
 |---|---|---:|---|---|
@@ -38,4 +14,3 @@ Run on 5 Oct 2026. Screenshot: [evidence/01.jpg](../../evidence/01.jpg). Raw out
 | 8 | [#9455 The reading on the voltmeter for f_recharge_station is incorrect.](https://github.com/cataclysmbn/Cataclysm-BN/issues/9455) | 7 | bug, good first issue | The voltmeter shows significant consumption even though stored energy is unaffected. |
 
 Fetched 200 results (174 unique non-PR issues); bug: 132, good first issue: 100. Timeline checks for 36 issues hit the unauthenticated rate limit (remaining 0; reset 2026-10-05 06:05:47 UTC), so the ranking may omit issues with unverified linked-PR status.
-

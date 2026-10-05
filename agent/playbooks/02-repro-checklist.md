@@ -27,4 +27,22 @@ Follow the checklist on a local build. If the bug reproduces, the file list beco
 
 ## Worked example
 
-<!-- paste real output from Agent37 run here -->
+Run on 5 Oct 2026. Screenshot: [evidence/02.jpg](../../evidence/02.jpg). Raw output, unedited:
+
+## Repro checklist
+1. Enable the “Disable NPC Needs” mod (`NO_NPC_FOOD`) in a world.
+2. Recruit an NPC follower.
+3. Talk to them and press **[S] Size up stats**.
+4. Observe that the display says “Hungry” even though the NPC is fully fed.
+
+## Likely files and functions
+- `src/npctalk.cpp` — size-up info hunger branch — named in the issue; it contains the reported inverted condition.
+
+## Minimal fix plan
+- Invert the hunger-deficit condition so fed NPCs do not display “Hungry.”
+- Check the hunger time estimate’s units; the issue notes `bmr()` is kcal per day.
+- Test the display for fed and hungry NPCs, including with `NO_NPC_FOOD` enabled.
+
+## What could go wrong
+Changing the threshold or time calculation could make the display inconsistent with hunger complaints or other NPC hunger logic. The issue doesn’t establish whether this calculation is duplicated elsewhere. Comments could not be fetched: the comments endpoint returned HTTP 403 rate-limited.
+

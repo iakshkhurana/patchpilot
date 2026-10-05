@@ -49,8 +49,8 @@ Every row here links to a sanitized copy of the actual output in [examples/](exa
 
 | Date | Command | Target | What it produced | Output |
 |---|---|---|---|---|
-| | | | | |
-| | | | | |
+| 2026-10-05 | `triage` | cataclysmbn/Cataclysm-BN | Top-8 table, all scored 7/7. 174 unique issues fetched; linked-PR check hit the 60/hr rate limit on 36 of them and said so. | [examples/01-triage.md](examples/01-triage.md), [screenshot](evidence/01.jpg) |
+| 2026-10-05 | `repro` | [#10447](https://github.com/cataclysmbn/Cataclysm-BN/issues/10447) | 4-step repro, pointed at `src/npctalk.cpp`, 3-bullet fix plan. Comments endpoint was rate-limited and it reported that instead of guessing. | [examples/02-repro-10447.md](examples/02-repro-10447.md), [screenshot](evidence/02.jpg) |
 | | | | | |
 
 How to add a row: run the command on Agent37, screenshot the response into `evidence/`, paste the raw text into `examples/NN-command.md`, fill the playbook's worked-example placeholder, write a devlog line, then add the row.
