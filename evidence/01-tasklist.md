@@ -1,0 +1,12 @@
+| # | Issue | Score | Labels | Why this one |
+|---|---|---:|---|---|
+| 1 | [#7441 Dog from NPC find dog quest causes error if it dies after finishing the quest](https://github.com/cataclysmbn/Cataclysm-BN/issues/7441) | 7 | bug, good first issue | Finishing the quest and then letting the dog die triggers an error in `avatar::on_mission_finished`. |
+| 2 | [#8127 yule wreath placement bug](https://github.com/cataclysmbn/Cataclysm-BN/issues/8127) | 7 | bug, good first issue | Activating the yule wreath spawns pine wreath furniture but does not remove the item. |
+| 3 | [#8147 Lab tower rooftop has holes for electronic machinery and door winches](https://github.com/cataclysmbn/Cataclysm-BN/issues/8147) | 7 | bug, good first issue | Electronic machinery and winches leave holes in the lab tower roof. |
+| 4 | [#8248 Butcher menu does not function on vehicle cargo tiles](https://github.com/cataclysmbn/Cataclysm-BN/issues/8248) | 7 | bug, good first issue | The butcher menu says there are no corpses when a disassembleable object is on vehicle cargo. |
+| 5 | [#8754 Nonfunctional Agriculture Vehicles](https://github.com/cataclysmbn/Cataclysm-BN/issues/8754) | 7 | bug, good first issue | Tractor wheels can hit and destroy plants before the reapers harvest them. |
+| 6 | [#9104 "Cycle targets" doesn't work with vehicle turrets](https://github.com/cataclysmbn/Cataclysm-BN/issues/9104) | 7 | bug, good first issue | Cycling targets with a vehicle turret misses targets outside the vehicle. |
+| 7 | [#9369 doctor mission spawned a workstation in the refugee center](https://github.com/cataclysmbn/Cataclysm-BN/issues/9369) | 7 | bug, good first issue | The mission’s working PC spawned at the refugee center entrance instead of the lab. |
+| 8 | [#9455 The reading on the voltmeter for f_recharge_station is incorrect.](https://github.com/cataclysmbn/Cataclysm-BN/issues/9455) | 7 | bug, good first issue | The voltmeter shows significant consumption even though stored energy is unaffected. |
+
+Fetched 200 results (174 unique non-PR issues); bug: 132, good first issue: 100. Timeline checks for 36 issues hit the unauthenticated rate limit (remaining 0; reset 2026-10-05 06:05:47 UTC), so the ranking may omit issues with unverified linked-PR status.
